@@ -2,6 +2,54 @@
   <div class="container">
     <div>
        <h1>Home page</h1>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <h1>....</h1>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <h1>....</h1>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <h1>....</h1>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <h1>....</h1>
     </div>
    
   </div>
@@ -9,7 +57,7 @@
 
 <script>
 export default {
-  layout: "menu",
+  layout: "slider",
 };
 </script>
 
