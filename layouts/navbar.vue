@@ -1,15 +1,14 @@
 <template>
   <div class="container">
-    <div>
-      <Home />
-    </div>
+    <h1>Navbar</h1>
+    <Nuxt />
   </div>
 </template>
 
 <script>
 
+
 export default {
-  layout: 'navbar'
 }
 </script>
 
@@ -17,5 +16,4 @@ export default {
 .container {
   width: 100%;
 }
-
 </style>
