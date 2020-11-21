@@ -1,15 +1,22 @@
 <template>
   <div class="container">
-    <h1>Navbar</h1>
-    <Nuxt />
+    <div>
+      <Navbar />
+    </div>
+    <div>
+      <Nuxt />
+    </div>
   </div>
 </template>
 
 <script>
-
+import Navbar from "~/components/Navbar";
 
 export default {
-}
+  components: {
+    Navbar,
+  },
+};
 </script>
 
 <style>

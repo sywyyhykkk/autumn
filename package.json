@@ -9,10 +9,10 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "ant-design-vue": "^1.7.2",
+    "babel-plugin-component": "^1.1.1",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6",
-    "vue-tree-nav": "^0.0.16"
+    "nuxt": "^2.14.6"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
