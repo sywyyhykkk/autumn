@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
       <h1 class="title">
         Admin
       </h1>
@@ -10,7 +9,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  layout: 'navbar'
+}
 </script>
 
 <style scoped>
