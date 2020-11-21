@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        autumn
+        Welcome to autumn!
       </h1>
       <div class="links">
         <a
