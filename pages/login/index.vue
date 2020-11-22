@@ -24,6 +24,7 @@ export default {}
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border:3px solid #000
 }
 input{
     border-width: 0px;
