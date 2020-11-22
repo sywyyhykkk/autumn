@@ -51,10 +51,10 @@
 
     <a-layout :style="{ marginLeft: '200px' }">
       <a-layout-header
-        :style="{ background: '#fff', padding: 0, border: '1px solid red' }"
+        :style="{ background: '#fff', padding: 0, border: '1px solid red', margin: '0 16px 0' }"
       >
         <div
-          :style="{ textAlign: 'center', lineHeight: '50px', height: '50px' }"
+          :style="{ textAlign: 'center', lineHeight: '50px', height: '50px',  }"
         >
           <h1>Header</h1>
         </div>
