@@ -1,17 +1,15 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="title">
-        Admin
+      <h1>
+        Search
       </h1>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  layout: 'slider'
-}
+export default {}
 </script>
 
 <style scoped>

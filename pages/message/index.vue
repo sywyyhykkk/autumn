@@ -1,9 +1,8 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
-      <h1 class="title">
-        Registration
+      <h1>
+        Message
       </h1>
     </div>
   </div>

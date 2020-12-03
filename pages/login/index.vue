@@ -5,14 +5,19 @@
         <input type="password" placeholder="Password"/>    
     </div>
     <div class="button">
-        <button @click="login">Login</button>  
-        <button @click="login">Register</button>  
+        <button :click="login">Login</button>  
     </div>
 </div>
 </template>
 
 <script>
-export default {}
+export default {
+    methods: {
+        login(){
+
+        }
+    }
+}
 </script>
 
 <style scoped>

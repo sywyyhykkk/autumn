@@ -1,114 +1,154 @@
 <template>
-  <a-layout id="components-layout-demo-fixed-sider">
+  <a-layout>
     <a-layout-sider
       :style="{
         overflow: 'auto',
         height: '100vh',
-        position: 'fixed',
-        left: 0,
         background: '#fff',
-        border: '1px solid red',
       }"
     >
-      <div
-        class="logo"
-        :style="{
-          border: '1px solid red',
-          textAlign: 'center',
-          height: '100px',
-          lineHeight: '100px',
-        }"
-      >
-        <h1>Autumn</h1>
-        <div>
-          <div
-            :style="{
-              border: '1px solid red',
-              height: '150px',
-              width: '150px'
-            }"
-
-            v-for="dog in dogs" :key="dog"
-          >
-          
-            <nav-bar-item :imageUrl="imageUrl" />
-          </div>
-
-        </div>
+      <div>
+        <img
+          :style="{ width: '200px', height: '100px' }"
+          src="../assets/images/logo.png"
+        />
       </div>
-      <!-- <a-menu theme="light" mode="inline" :style="{}">
-        <a-menu-item key="1">
-          <span class="nav-text">nav 1</span>
+      <a-menu theme="light" mode="inline" v-model="selectedKeys">
+        <a-menu-item :key="menus[0].key">
+          <NuxtLink :to="menus[0].link">
+            <a-icon type="home" />
+            <span>{{ menus[0].name }}</span>
+          </NuxtLink>
         </a-menu-item>
-        <a-menu-item key="2">
-          <span class="nav-text">nav 2</span>
+
+        <a-menu-item :key="menus[1].key">
+          <NuxtLink :to="menus[1].link">
+            <a-icon type="heart" />
+            <span>{{ menus[1].name }}</span>
+          </NuxtLink>
         </a-menu-item>
-        <a-menu-item key="3">
-          <span class="nav-text">nav 3</span>
+
+        <a-menu-item :key="menus[2].key">
+          <NuxtLink :to="menus[2].link">
+            <a-icon type="menu" />
+            <span>{{ menus[2].name }}</span>
+          </NuxtLink>
         </a-menu-item>
-        <a-menu-item key="4">
-          <span class="nav-text">nav 4</span>
+
+        <a-menu-item :key="menus[3].key">
+          <NuxtLink :to="menus[3].link">
+            <a-icon type="setting" />
+            <span>{{ menus[3].name }}</span>
+          </NuxtLink>
         </a-menu-item>
-        <a-menu-item key="5">
-          <span class="nav-text">nav 5</span>
-        </a-menu-item>
-        <a-menu-item key="6">
-          <span class="nav-text">nav 6</span>
-        </a-menu-item>
-        <a-menu-item key="7">
-          <span class="nav-text">nav 7</span>
-        </a-menu-item>
-        <a-menu-item key="8">
-          <span class="nav-text">nav 8</span>
-        </a-menu-item>
-      </a-menu> -->
+      </a-menu>
     </a-layout-sider>
 
-    <a-layout :style="{ marginLeft: '200px' }">
+    <a-layout :style="{ height: '100vh' }">
       <a-layout-header
         :style="{
           background: '#fff',
-          padding: 0,
-          border: '1px solid red',
           margin: '0 16px 0',
+          padding: '0px',
         }"
       >
-        <div
-          :style="{ textAlign: 'center', lineHeight: '50px', height: '50px' }"
-        >
-          <h1>Header</h1>
+        <div class="header">
+          <NuxtLink :to="topMenus[0].link" style="width: 100px">
+            <a-button class="header-item" type="link">
+              <a-icon type="user" /> {{ topMenus[0].name }}
+            </a-button>
+          </NuxtLink>
+          <NuxtLink :to="topMenus[1].link" style="width: 100px">
+            <a-button class="header-item" type="link">
+              <a-icon type="message" /> {{ topMenus[1].name }}
+            </a-button>
+          </NuxtLink>
+          <NuxtLink :to="topMenus[2].link" style="width: 100px">
+            <a-button class="header-item" type="link">
+              <a-icon type="search" /> {{ topMenus[2].name }}
+            </a-button>
+          </NuxtLink>
+          <NuxtLink :to="topMenus[3].link" style="width: 100px">
+            <a-button class="header-item" type="link">
+              <a-icon type="plus" /> {{ topMenus[3].name }}
+            </a-button>
+          </NuxtLink>
         </div>
       </a-layout-header>
 
-      <a-layout-content :style="{ margin: '20px 16px 0', overflow: 'initial' }">
-        <div
-          :style="{
-            padding: '24px',
-            background: '#fff',
-            textAlign: 'center',
-            border: '1px solid red',
-          }"
-        >
-          <Nuxt />
-        </div>
+      <a-layout-content :style="{ margin: '20px 16px 0', height: '100vh' }">
+        <Nuxt />
       </a-layout-content>
+
+      <a-layout-footer :style="{ textAlign: 'center' }">
+        Copyright © 2020 Autumn
+      </a-layout-footer>
     </a-layout>
   </a-layout>
 </template>
 <script>
-import NavBarItem from "../components/NavBarItem.vue";
-
 export default {
+  components: {},
   data() {
     return {
-      imageUrl: require('../assets/images/1.png'),
-      dogs: [1, 2, 3]
+      imageUrl: require("../assets/images/1.png"),
+      menus: [
+        {
+          key: "1",
+          name: "Home",
+          link: "/",
+        },
+        {
+          key: "2",
+          name: "Favourite",
+          link: "/favourite",
+        },
+        {
+          key: "3",
+          name: "Your Posts",
+          link: "/",
+        },
+        {
+          key: "4",
+          name: "Setting",
+          link: "/setting",
+        },
+      ],
+      topMenus: [
+        {
+          name: "User",
+          link: "/login",
+        },
+        {
+          name: "Message ",
+          link: "/message",
+        },
+        {
+          name: "Search",
+          link: "/search",
+        },
+        {
+          name: "New Post",
+          link: "/",
+        },
+      ],
+      selectedKeys: ["1"],
     };
   },
-  components: { NavBarItem },
+  methods: {},
 };
 </script>
 
 <style>
-
+.header {
+  display: inline-block;
+  vertical-align: top;
+  /* border: 1px red solid;  */
+  margin-right: 10px;
+}
+.header-item {
+  padding: 10px;
+  width: 100px;
+}
 </style>
+
